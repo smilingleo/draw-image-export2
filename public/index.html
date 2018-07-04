@@ -1,0 +1,41 @@
+<!--
+  Copyright (c) 2006-2013, JGraph Ltd
+  
+  File I/O example for mxGraph. This example demonstrates reading an
+  XML file, writing a custom parser, applying an automatic layout and
+  defining a 2-way edge.
+-->
+<html>
+<head>
+	<title>mxGraph Markdown Exporter</title>
+
+	<!-- Sets the basepath for the library if not in same directory -->
+	<script type="text/javascript">
+		mxBasePath = './mxgraph/src';
+	</script>
+
+	<!-- Loads and initializes the library -->
+	<script type="text/javascript" src="./mxgraph/src/js/mxClient.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.6/pako.min.js"></script>
+	<script type="text/javascript" src="./js/draw2md.js"></script>
+
+	<!-- Example code -->
+	<script type="text/javascript">
+	</script>
+</head>
+
+<!-- Page passes the container for the graph to the program -->
+<body style="margin:4px;">
+	<div id="page-wrapper">
+		<h1>mxGraph Markdown Exporter</h1>
+        <form id="exportForm" name="exportForm" action="/markdown-exporter" method="POST">
+            <input type="hidden" id="data" name="data" />
+			<div>
+				Select a xml file: 
+				<input type="file" id="fileInput" onchange="javascript: fileChose();">
+			</div>
+		</form>
+	</div>	
+</body>
+</html>
